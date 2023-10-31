@@ -10,7 +10,7 @@ class Questao extends StatelessWidget {
     return Container(
       // Largura da tela
       width: double.infinity,
-      // Margi
+      // Margem de 10 para left, top, bottom e right
       margin: EdgeInsets.all(10),
       child: Text(
         texto,

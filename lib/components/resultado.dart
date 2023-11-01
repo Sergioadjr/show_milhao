@@ -7,12 +7,16 @@ class Resultado extends StatelessWidget {
   Resultado(this.pontuacao, this.reiniciarQuestionario);
 
   String? get fraseDoResultado {
-    if (pontuacao <= 1) {
-      return "Poxa";
-    } else if (pontuacao <= 5) {
-      return "Quase";
+    if (pontuacao <= 5) {
+      return "Infelizmente você acertou apenas $pontuacao questão/õe(s)";
     } else if (pontuacao <= 10) {
-      return "Brabao";
+      return "Está melhorando, você acertou $pontuacao questões";
+    } else if (pontuacao <= 15) {
+      return "Vamos lá, você consegue, você acertou $pontuacao questões";
+    } else if (pontuacao <= 21) {
+      return "Muito bom, você acertou $pontuacao questões" ;
+    } else if (pontuacao == 22) {
+      return "Parabéns, você acertou $pontuacao questões" ;
     }
   }
 
@@ -23,7 +27,7 @@ class Resultado extends StatelessWidget {
       children: [
         Center(
           child: Text(
-            fraseDoResultado.toString(),
+            fraseDoResultado!,
             style: TextStyle(fontSize: 32),
           ),
         ),

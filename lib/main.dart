@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'components/questao.dart';
-import 'components/resposta.dart';
+import 'components/questionario.dart';
+import 'components/resultado.dart';
 
 main() {
   runApp(new PerguntaApp());
@@ -9,87 +9,39 @@ main() {
 class _PerguntaAppState extends State<PerguntaApp> {
   var _perguntaSelecionada = 0;
 
+// List<Map<String, Object>> _perguntas
+  final _perguntas = const [
+    {
+      'texto': 'Qual é a sua cor favorita?',
+      'respostas': ['Azul', 'Preto', 'Amarelo', 'Roxo'],
+    },
+    {
+      'texto': 'Qual é o seu animal  favorito?',
+      'respostas': ['Macaco', 'Baleia', 'Elefante', 'Avestruz'],
+    },
+  ];
+
   void _responder() {
-    setState(() {
-      _perguntaSelecionada++;
-    });
+    if (temPerguntaSelecionada) {
+      setState(() {
+        _perguntaSelecionada++;
+      });
+    }
+  }
+
+  bool get temPerguntaSelecionada {
+    return _perguntaSelecionada < _perguntas.length;
   }
 
   @override
   Widget build(BuildContext context) {
-    final List<Map<String, Object>> perguntas = [
-      {
-        'texto': 'Qual é a sua cor favorita?',
-        'respostas': ['Azul', 'Preto', 'Amarelo', 'Roxo'],
-      },
-      {
-        'texto': 'Qual é o seu animal  favorito?',
-        'respostas': ['Macaco', 'Baleia', 'Elefante', 'Avestruz'],
-      },
-      {
-        'texto': 'Fazer?',
-        'respostas': ['Macaco', 'Baleia', 'Elefante', 'Avestruz'],
-      },
-      {
-        'texto': 'Fazer?',
-        'respostas': ['Macaco', 'Baleia', 'Elefante', 'Avestruz'],
-      },
-      {
-        'texto': 'Fazer?',
-        'respostas': ['Macaco', 'Baleia', 'Elefante', 'Avestruz'],
-      },
-      {
-        'texto': 'Fazer?',
-        'respostas': ['Macaco', 'Baleia', 'Elefante', 'Avestruz'],
-      },
-      {
-        'texto': 'Fazer?',
-        'respostas': ['Macaco', 'Baleia', 'Elefante', 'Avestruz'],
-      },
-      {
-        'texto': 'Fazer?',
-        'respostas': ['Macaco', 'Baleia', 'Elefante', 'Avestruz'],
-      },
-      {
-        'texto': 'Fazer?',
-        'respostas': ['Macaco', 'Baleia', 'Elefante', 'Avestruz'],
-      },
-      {
-        'texto': 'Fazer?',
-        'respostas': ['Macaco', 'Baleia', 'Elefante', 'Avestruz'],
-      },
-      {
-        'texto': 'Fazer?',
-        'respostas': ['Macaco', 'Baleia', 'Elefante', 'Avestruz'],
-      },
-      {
-        'texto': 'Fazer?',
-        'respostas': ['Macaco', 'Baleia', 'Elefante', 'Avestruz'],
-      },
-      {
-        'texto': 'Fazer?',
-        'respostas': ['Macaco', 'Baleia', 'Elefante', 'Avestruz'],
-      },
-    ];
-
-    List<Widget> respostas = [];
-
-    for (String textoResp
-        in perguntas[_perguntaSelecionada].cast()['respostas']) {
-      respostas.add(Resposta(textoResp, _responder));
-    }
-
+    
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: Center(child: Text('Show Do Milhão')),
         ),
-        body: Column(
-          children: [
-            Questao(perguntas[_perguntaSelecionada]['texto'].toString()),
-            ...respostas,
-          ],
-        ),
+        body: temPerguntaSelecionada ? Questionario(perguntas: _perguntas, perguntaSelecionada: _perguntaSelecionada, quandoResponder: _responder,) : Resultado(),
       ),
     );
   }

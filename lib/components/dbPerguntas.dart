@@ -3,6 +3,7 @@ class PerguntasDB {
     {
       'texto':
           'Normalmente, quantos litros de sangue uma pessoa tem? Em média, quantos são retirados numa doação de sangue?',
+          'nivel': 'facil',
       'respostas': [
         {
           'texto': 'Tem entre 2 a 4 litros. São retirados 450 mililitros',
@@ -19,6 +20,7 @@ class PerguntasDB {
     },
     {
       'texto': 'De quem é a famosa frase “Penso, logo existo”?',
+      'nivel': 'intermediario',
       'respostas': [
         {'texto': 'Platão', 'pontuacao': 0},
         {'texto': 'Galileu Galilei', 'pontuacao': 0},
@@ -29,6 +31,7 @@ class PerguntasDB {
     },
     {
       'texto': 'De onde é a invenção do chuveiro elétrico?',
+      'nivel': 'facil',
       'respostas': [
         {'texto': 'França', 'pontuacao': 0},
         {'texto': 'Inglaterra', 'pontuacao': 0},
@@ -39,6 +42,7 @@ class PerguntasDB {
     },
     {
       'texto': 'Quais o menor e o maior país do mundo?',
+      'nivel': 'facil',
       'respostas': [
         {'texto': 'Vaticano e Rússia', 'pontuacao': 1},
         {'texto': 'Nauru e China', 'pontuacao': 0},
@@ -50,6 +54,7 @@ class PerguntasDB {
     {
       'texto':
           'Qual o nome do presidente do Brasil que ficou conhecido como Jango?',
+          'nivel': 'facil',
       'respostas': [
         {'texto': 'Jânio Quadros', 'pontuacao': 0},
         {'texto': 'Jacinto Anjos', 'pontuacao': 0},
@@ -61,6 +66,7 @@ class PerguntasDB {
     {
       'texto':
           'Qual o grupo em que todas as palavras foram escritas corretamente?',
+          'nivel': 'facil',
       'respostas': [
         {
           'texto': 'Asterístico, beneficiente, meteorologia, entertido',
@@ -86,6 +92,7 @@ class PerguntasDB {
     },
     {
       'texto': 'Qual o livro mais vendido no mundo a seguir à Bíblia?',
+      'nivel': 'intermediario',
       'respostas': [
         {'texto': 'O Senhor dos Anéis', 'pontuacao': 0},
         {'texto': 'Dom Quixote', 'pontuacao': 1},
@@ -96,6 +103,7 @@ class PerguntasDB {
     },
     {
       'texto': 'Quantas casas decimais tem o número pi?',
+      'nivel': 'facil',
       'respostas': [
         {'texto': 'Duas', 'pontuacao': 0},
         {'texto': 'Centenas', 'pontuacao': 0},
@@ -107,6 +115,7 @@ class PerguntasDB {
     {
       'texto':
           'Atualmente, quantos elementos químicos a tabela periódica possui?',
+          'nivel': 'intermediario',
       'respostas': [
         {'texto': '113', 'pontuacao': 0},
         {'texto': '109', 'pontuacao': 0},
@@ -118,6 +127,7 @@ class PerguntasDB {
     {
       'texto':
           'Quais os países que têm a maior e a menor expectativa de vida do mundo?',
+          'nivel': 'intermediario',
       'respostas': [
         {'texto': 'Japão e Serra Leoa', 'pontuacao': 1},
         {'texto': 'Austrália e Afeganistão', 'pontuacao': 0},
@@ -128,6 +138,7 @@ class PerguntasDB {
     },
     {
       'texto': 'O que a palavra legend significa em português?',
+      'nivel': 'facil',
       'respostas': [
         {'texto': 'Legenda', 'pontuacao': 0},
         {'texto': 'Conto', 'pontuacao': 0},
@@ -139,6 +150,7 @@ class PerguntasDB {
     {
       'texto':
           'Qual o número mínimo de jogadores em cada time numa partida de futebol?',
+          'nivel': 'intermediario',
       'respostas': [
         {'texto': '8', 'pontuacao': 0},
         {'texto': '10', 'pontuacao': 0},
@@ -149,6 +161,7 @@ class PerguntasDB {
     },
     {
       'texto': 'Quais os principais autores do Barroco no Brasil?',
+      'nivel': 'dificil',
       'respostas': [
         {
           'texto':
@@ -176,6 +189,7 @@ class PerguntasDB {
     },
     {
       'texto': 'Quais as duas datas que são comemoradas em novembro?',
+      'nivel': 'intermediario',
       'respostas': [
         {'texto': 'Independência do Brasil e Dia da Bandeira', 'pontuacao': 0},
         {
@@ -190,6 +204,7 @@ class PerguntasDB {
     },
     {
       'texto': 'Quem pintou "Guernica"?',
+      'nivel': 'dificil',
       'respostas': [
         {'texto': 'Paul Cézanne', 'pontuacao': 0},
         {'texto': 'Pablo Picasso', 'pontuacao': 1},
@@ -200,6 +215,7 @@ class PerguntasDB {
     },
     {
       'texto': 'Quanto tempo a luz do Sol demora para chegar à Terra?',
+      'nivel': 'intermediario',
       'respostas': [
         {'texto': '12 minutos', 'pontuacao': 0},
         {'texto': '1 dia', 'pontuacao': 0},
@@ -211,6 +227,7 @@ class PerguntasDB {
     {
       'texto':
           'Qual a tradução da frase “Fabiano cogió su saco antes de salir”?',
+          'nivel': 'intermediario',
       'respostas': [
         {'texto': 'Fabiano coseu seu paletó antes de sair', 'pontuacao': 0},
         {'texto': 'Fabiano fechou o saco antes de sair', 'pontuacao': 0},
@@ -221,6 +238,7 @@ class PerguntasDB {
     },
     {
       'texto': 'Qual a nacionalidade de Che Guevara?',
+      'nivel': 'intermediario',
       'respostas': [
         {'texto': 'Cubana', 'pontuacao': 0},
         {'texto': 'Peruana', 'pontuacao': 0},
@@ -232,6 +250,7 @@ class PerguntasDB {
     {
       'texto':
           'Quais são os três predadores do reino animal reconhecidos pela habilidade de caçar em grupo, se camuflar para surpreender as presas e possuir sentidos apurados, respectivamente:',
+          'nivel': 'intermediario',
       'respostas': [
         {'texto': 'Tubarão branco, crocodilo e sucuri', 'pontuacao': 0},
         {'texto': 'Tigre, gavião e orca', 'pontuacao': 0},
@@ -242,6 +261,7 @@ class PerguntasDB {
     },
     {
       'texto': 'Qual a altura da rede de vôlei nos jogos masculino e feminino?',
+      'nivel': 'intermediario',
       'respostas': [
         {'texto': '2,4 para ambos', 'pontuacao': 0},
         {'texto': '2,5 m e 2,0 m', 'pontuacao': 0},
@@ -253,6 +273,7 @@ class PerguntasDB {
     {
       'texto':
           'Qual personagem folclórico costuma ser agradado pelos caçadores com a oferta de fumo?',
+          'nivel': 'intermediario',
       'respostas': [
         {'texto': 'Caipora', 'pontuacao': 1},
         {'texto': 'Saci', 'pontuacao': 0},
@@ -263,6 +284,7 @@ class PerguntasDB {
     },
     {
       'texto': 'Qual a montanha mais alta do Brasil?',
+      'nivel': 'intermediario',
       'respostas': [
         {'texto': 'Pico da Neblina', 'pontuacao': 1},
         {'texto': 'Pico Paraná', 'pontuacao': 0},

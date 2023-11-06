@@ -32,7 +32,64 @@ class Questionario extends StatelessWidget {
             () => quandoResponder(int.parse(resp['pontuacao'].toString())),
           );
         }).toList(),
+        SizedBox(height: 20),
+        ElevatedButton(
+          onPressed: () => _mostrarAjuda(context),
+          child: Text('Ajuda'),
+          style: ElevatedButton.styleFrom(
+            foregroundColor: Colors.white,
+            backgroundColor: Colors.yellow[700],
+          ),
+        ),
       ],
     );
+  }
+
+  void _mostrarAjuda(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) {
+        return AlertDialog(
+          title: Text('Ajuda'),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                  _usarAjuda('Pular');
+                },
+                child: Text('Pular'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                  _usarAjuda('Ajuda dos universitários');
+                },
+                child: Text('Ajuda dos universitários'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                  _usarAjuda('Ajuda das cartas');
+                },
+                child: Text('Ajuda das cartas'),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+
+  void _usarAjuda(String tipoAjuda) {
+    // Implemente a lógica para cada tipo de ajuda aqui
+    if (tipoAjuda == 'Pular') {
+      // Implemente a lógica para pular a pergunta
+    } else if (tipoAjuda == 'Ajuda dos universitários') {
+      // Implemente a lógica para a ajuda dos universitários
+    } else if (tipoAjuda == 'Ajuda das cartas') {
+      // Implemente a lógica para a ajuda das cartas
+    }
   }
 }

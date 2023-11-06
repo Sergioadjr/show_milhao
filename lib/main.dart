@@ -15,6 +15,11 @@ class _PerguntaAppState extends State<PerguntaApp> {
 // List<Map<String, Object>> _perguntas
   final _perguntas = PerguntasDB.perguntas;
 
+  final perguntasFaceis = PerguntasDB.perguntas.where((pergunta) => pergunta['nivel'] == 'facil').toList();
+  final perguntasIntermediarias = PerguntasDB.perguntas.where((pergunta) => pergunta['nivel'] == 'intermediario').toList();
+  final perguntasDificeis = PerguntasDB.perguntas.where((pergunta) => pergunta['nivel'] == 'dificil').toList();
+
+
   void _responder(int pontuacao) {
     if (temPerguntaSelecionada) {
       setState(() {

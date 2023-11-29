@@ -1,4 +1,4 @@
-# Gerador de tabuada
+# Quiz de perguntas
 
 Este é um aplicativo simples de quiz, que utiliza o framework Flutter e a linguagem Dart.
 
